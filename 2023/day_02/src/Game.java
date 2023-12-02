@@ -1,8 +1,10 @@
-class Game {
-    public static String RED = "red";
-    public static String BLUE = "blue";
-    public static String GREEN = "green";
+enum Color {
+    RED,
+    BLUE,
+    GREEN,
+}
 
+class Game {
     private int id;
     private int red;
     private int blue;
@@ -23,12 +25,13 @@ class Game {
         this.green = 0;
         for (String play: sections[1].trim().split("; ")) {
             for (String item: play.split(", ")) {
-                if (item.endsWith(Game.RED)) {
-                    this.red = Math.max(this.red, Integer.valueOf(item.split(" ")[0]));
-                } else if (item.endsWith(Game.BLUE)) {
-                    this.blue = Math.max(this.blue, Integer.valueOf(item.split(" ")[0]));
-                } else if (item.endsWith(Game.GREEN)) {
-                    this.green = Math.max(this.green, Integer.valueOf(item.split(" ")[0]));
+                int value = Integer.valueOf(item.split(" ")[0]);
+                if (item.endsWith(Color.RED.name().toLowerCase())) {
+                    this.red = Math.max(this.red, value);
+                } else if (item.endsWith(Color.BLUE.name().toLowerCase())) {
+                    this.blue = Math.max(this.blue, value);
+                } else if (item.endsWith(Color.GREEN.name().toLowerCase())) {
+                    this.green = Math.max(this.green, value);
                 }
             }
         }
