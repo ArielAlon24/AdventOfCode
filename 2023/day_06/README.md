@@ -3,7 +3,7 @@
 I'll split the total time $t$ to $t_1$ and $t_2$, $t_1$ is the acceleration time, and $t_2$ is the moving time ($t1 + t2 = t$).
 
 In every milisecond that passes in $t_1$ the velocity of the boat $v$, increases by $1$ milimiter per milisecond. Thus $v$ can be described by the following formula:
-$$v = t1$$
+$$v = t_1$$
 Which means that $x$, the total distance that the boat made can be expressed as:
 $$x = t_2v = t_1t_2 = t_1(t - t_1) = t_1t - t_1 ^ 2$$
 
