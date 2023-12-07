@@ -33,6 +33,8 @@ t1_1 - t1_0 + 1 =
     - floor((t - sqrt(t^2 - 4x)) / 2 + 1) + 1
 $$
 =======
+=======
+>>>>>>> 7092a1c30dc1c8bc151dfe7643e36a58a8d19370
 # Solving Proccess
 
 I'll split the total time $t$ to $t_1$ and $t_2$, $t_1$ is the acceleration time, and $t_2$ is the moving time ($t1 + t2 = t$).
