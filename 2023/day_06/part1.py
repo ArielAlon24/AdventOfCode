@@ -7,8 +7,12 @@ def create_int_list(string: str) -> List[int]:
 
 
 def get_range(t: int, x: int) -> int:
-    root = math.sqrt(t * t - 4 * x)
-    return math.ceil((t + root) / 2 - 1) - math.floor((t - root) / 2 + 1) + 1
+    discriminant = math.sqrt(t * t - 4 * x)
+    return (
+        math.ceil((t + discriminant) / 2 - 1)
+        - math.floor((t - discriminant) / 2 + 1)
+        + 1
+    )
 
 
 def main() -> None:
